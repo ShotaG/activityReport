@@ -5,6 +5,7 @@ $('#firstClick').click(function(event) {
 	$('#workSection').show();
 	$('#date').hide();
 	$('#start').hide();
+	console.log($('#datepicker').val());
 
 });
 
@@ -50,6 +51,7 @@ $('#thirdClick').click(function(event) {
 	$('#area').hide();
 	$('#intro').hide();
 	$('#workSection').hide();
+	$('#selectedDate').append($('#datepicker').val());
 
 	//if s/c/n then this
 	$('#section').find("option:selected").each(function() {
