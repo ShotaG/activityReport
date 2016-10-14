@@ -71,4 +71,3 @@ $('#thirdClick').click(function(event) {
 	
 });
 
-Contact GitHub API Training Shop Blog About
