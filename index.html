@@ -4,16 +4,23 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Lifeguard Activity Report</title>
-  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-  <link rel="stylesheet" href="/resources/demos/style.css">
-  <link rel="stylesheet" type="text/css" href="app.css">
+  
+  <script src="https://cdn.firebase.com/js/client/2.4.2/firebase.js"></script>
   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   <script>
-  $( function() {
+  $(function() {
     $( "#datepicker" ).datepicker();
   } );
   </script>
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <link rel="stylesheet" type="text/css" href="app.css">
+
+
+
+
+
 </head>
 <body>
  <h1 id="intro">Please report your activity for the day</h1>
@@ -32,7 +39,7 @@
               <option value="LS200">Central</option>
               <option value="LS300">Northern</option>
             </select>
-            <!--<input type="submit" id="secondClick">-->
+            
           </div>
             
           <div id="area">
@@ -101,7 +108,10 @@
           <h1>body recoveries</h1><input type="number" id="recovery">
         </form>
 
- <!--<button type="button" onclick="alert('Hello World!')">Click Me!</button>-->
+
+<script src="https://www.gstatic.com/firebasejs/3.5.0/firebase.js"></script>
+
  <script type="text/javascript" src="app.js"></script>
+ <script type="text/javascript" src="crud.js"></script>
 </body>
 </html>

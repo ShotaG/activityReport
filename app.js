@@ -11,14 +11,6 @@ $('#firstClick').click(function(event) {
 
 });
 
-/*function selectSection() {
-	if($('#section option:selected').text('Southern')) {
-		console.log('ya did it');
-	} else if($('#section option:selected').text('Central')) {
-		console.log('once again');
-	}
-}*/
-
 $('#section').change(function() {
 	$("#area").show();
 	$(this).find("option:selected").each(function() {
