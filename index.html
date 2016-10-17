@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Lifeguard Activity Report</title>
   
+
   <script src="https://cdn.firebase.com/js/client/2.4.2/firebase.js"></script>
   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
@@ -13,9 +14,11 @@
     $( "#datepicker" ).datepicker();
   } );
   </script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
   <link rel="stylesheet" href="/resources/demos/style.css">
   <link rel="stylesheet" type="text/css" href="app.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
 
 
@@ -94,8 +97,68 @@
         </form>
 
         <form id="stats">
-          <h1><div id="selectedArea"></div>Please enter your area's statistics for <div id="selectedDate"></div></h1>
-          <h1>attendance</h1><input type="number" id="attendance">
+          <h1 id="all"><div id="selectedArea"></div>Please enter your area's statistics for <div id="selectedDate"></div></h1>
+          <div id="statsList">
+            <div class="statistics" id="attendance">
+              <h1>attendance<input type="number"></h1>
+              <button type="button" id="nextOne">Next Field</button>
+            </div>
+            <div class="statistics" id="prevents">
+              <h1>preventative actions taken<input type="number"></h1>
+              <button type="button" id="previousOne">Previous Field</button>
+              <button type="button" id="nextTwo">Next Field</button>
+            </div>
+            <div class="statistics" id="ords">
+              <h1>ordinances enforced<input type="number"></h1>
+              <button type="button" id="previousTwo">Previous Field</button>
+              <button type="button" id="nextThree">Next Field</button>              
+            </div>
+            <div class="statistics" id="meds">
+              <h1>medical assistances<input type="number"></h1>
+              <button type="button" id="previousThree">Previous Field</button>
+              <button type="button" id="nextFour">Next Field</button>              
+            </div>
+            <div class="statistics" id="missing">
+              <h1>missing persons<input type="number"></h1>
+              <button type="button" id="previousFour">Previous Field</button>
+              <button type="button" id="nextFive">Next Field</button>
+            </div>
+            <div class="statistics" id="evr">
+              <h1>emergency vehicle responses<input type="number"></h1>
+              <button type="button" id="previousFive">Previous Field</button>
+              <button type="button" id="nextSix">Next Field</button>
+            </div>
+            <div class="statistics" id="aa">
+              <h1>agency assists<input type="number"></h1>
+              <button type="button" id="previousSix">Previous Field</button>
+              <button type="button" id="nextSeven">Next Field</button>
+            </div>
+            <div class="statistics" id="rescues">
+              <h1>rescues<input type="number"></h1>
+              <button type="button" id="previousSeven">Previous Field</button>
+              <button type="button" id="nextEight">Next Field</button>
+            </div>
+            <div class="statistics" id="o2">
+              <h1>oxygen therapy administered<input type="number"></h1>
+              <button type="button" id="previousEight">Previous Field</button>
+              <button type="button" id="nextNine">Next Field</button>
+            </div>
+            <div class="statistics" id="drownings">
+              <h1>drownings<input type="number"></h1>
+              <button type="button" id="previousNine">Previous Field</button>
+              <button type="button" id="nextTen">Next Field</button>
+            </div>
+            <div class="statistics" id="recovery">
+              <h1>body recoveries<input type="number"></h1>
+              <button type="button" id="previousTen">Previous Field</button>
+              <button type="button" id="allAnswered">Review My Stats</button>
+            </div>
+          </div>
+
+          
+          
+
+          <!--<h1 id="attendance">attendance<input type="number"></h1>
           <h1>preventative actions taken</h1><input type="number" id="prevents">
           <h1>ordinances enforced</h1><input type="number" id="ords">
           <h1>medical assistances</h1><input type="number" id="meds">
@@ -105,7 +168,7 @@
           <h1>rescues</h1><input type="number" id="rescues">
           <h1>oxygen therapy administered</h1><input type="number" id="o2">
           <h1>drownings</h1><input type="number" id="drownings">
-          <h1>body recoveries</h1><input type="number" id="recovery">
+          <h1>body recoveries</h1><input type="number" id="recovery">-->
         </form>
 
 

@@ -23,7 +23,7 @@ $(document).ready(function() {
   firebase.database().ref('dailyActivity').set({
     date: $('#datepicker').val(),
     section: "",//$('#section').attr('value'),  <-----undefined at this point, will define later
-    area: "",
+    area: "",     //as I enter the values, I will need to update the blank key-value pairs in database
 	stats: {
 		attendance: "",
 		prevents: "",

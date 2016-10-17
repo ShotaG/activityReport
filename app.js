@@ -42,6 +42,11 @@ $('#section').change(function() {
 $('#thirdClick').click(function(event) {
 	event.preventDefault();
 	$('#stats').show();
+	$("div.statistics:not(:first)").hide();
+	/*$('#statsList attendance').show();
+	$('#statsList attendance').not().hide();  <---worked when I had them as ul's
+													need to figure that one out
+	//$('#attendance').show();*/
 	$('#area').hide();
 	$('#intro').hide();
 	$('#workSection').hide();
@@ -62,4 +67,108 @@ $('#thirdClick').click(function(event) {
 	});
 	
 });
+
+//I should definitely be able to make this more dynamic and dry
+$('#nextOne').click(function() {
+	$('#prevents').show();
+	$('#attendance').hide();
+});
+
+$('#nextTwo').click(function() {
+	$('#ords').show();
+	$('#prevents').hide();
+});
+
+$('#nextThree').click(function() {
+	$('#meds').show();
+	$('#ords').hide();
+});
+
+$('#nextFour').click(function() {
+	$('#missing').show();
+	$('#meds').hide();
+});
+
+$('#nextFive').click(function() {
+	$('#evr').show();
+	$('#missing').hide();
+});
+
+$('#nextSix').click(function() {
+	$('#aa').show();
+	$('#evr').hide();
+});
+
+$('#nextSeven').click(function() {
+	$('#rescues').show();
+	$('#aa').hide();
+});
+
+$('#nextEight').click(function() {
+	$('#o2').show();
+	$('#rescues').hide();
+});
+
+$('#nextNine').click(function() {
+	$('#drownings').show();
+	$('#o2').hide();
+});
+
+$('#nextTen').click(function() {
+	$('#recovery').show();
+	$('#drownings').hide();
+});
+
+$('#previousOne').click(function() {
+	$('#attendance').show();
+	$('#prevents').hide();
+});
+
+$('#previousTwo').click(function() {
+	$('#ords').hide();
+	$('#prevents').show();
+});
+
+$('#previousThree').click(function() {
+	$('#meds').hide();
+	$('#ords').show();
+});
+
+$('#previousFour').click(function() {
+	$('#missing').hide();
+	$('#meds').show();
+});
+
+$('#previousFive').click(function() {
+	$('#evr').hide();
+	$('#missing').show();
+});
+
+$('#previousSix').click(function() {
+	$('#aa').hide();
+	$('#evr').show();
+});
+
+$('#previousSeven').click(function() {
+	$('#rescues').hide();
+	$('#aa').show();
+});
+
+$('#previousEight').click(function() {
+	$('#o2').hide();
+	$('#rescues').show();
+});
+
+$('#previousNine').click(function() {
+	$('#drownings').hide();
+	$('#o2').show();
+});
+
+$('#previousTen').click(function() {
+	$('#recovery').hide();
+	$('#drownings').show();
+});
+
+
+
 
