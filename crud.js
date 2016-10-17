@@ -13,21 +13,29 @@ $(document).ready(function() {
   var selectedDate = $('#datepicker').val();
 
   //Create dbReferences
-  var dbRefObject = firebase.database().ref().child('date');
+  var dbRefObject = firebase.database().ref().child('dailyActivity');
 
   //Sync object changes
   dbRefObject.on('value', snap => console.log(snap.val()));
 
   //basic write operations
   $('#firstClick').click(function writeUserData(date) {
-  firebase.database().ref('date').set({
+  firebase.database().ref('dailyActivity').set({
     date: $('#datepicker').val(),
     section: "",//$('#section').attr('value'),  <-----undefined at this point, will define later
     area: "",
 	stats: {
 		attendance: "",
 		prevents: "",
-		ords: ""
+		ords: "", 
+		meds: "",
+		missingPersons: "",
+		evr: "",
+		aa: "",
+		rescues: "",
+		oxygen: "",
+		drownings: "",
+		bodyRecoveries: ""
 
 	}      //<------how do i enter this?  
   });
