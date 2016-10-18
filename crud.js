@@ -40,18 +40,53 @@ $(document).ready(function() {
 	}      //<------how do i enter this?  
   });
 });
-  
+  //update section in db according to user selection
   $('#section').change(function() {
 	
 	$(this).find("option:selected").each(function() {
-		console.log($(this).attr("value"));
-		function writeUserData(section) {
-				firebase.database().ref('section').set({
-					section: $(this).attr("value")
-				});
+		if($(this).attr("value")=="LS100") {
+			firebase.database().ref('dailyActivity').update({
+				section: $(this).attr("value")
+			});
+			// console.log($(this).attr("value"));
+			//var southSelected=$(this).attr("value")
+			//storing the above as a variable, but how do i access this 
+			//variable in the next button click?  might have to rewrite 
+			//this as a callback, so that I can call the function, store 
+			//the result, and reuse it elsewhere.  
+		} else if($(this).attr("value")=="LS200") {
+			firebase.database().ref('dailyActivity').update({
+				section: $(this).attr("value")
+			});
+		} else {
+			firebase.database().ref('dailyActivity').update({
+				section: $(this).attr("value")
+			});
 		}
+
+		});
 	});
-  });
+
+  $('#thirdClick').click(function(event) {
+  	$('#section').find("option:selected").each(function() {
+		if($(this).attr("value")=="LS100") {
+			firebase.database().ref('dailyActivity').update({
+				area: south.options[south.selectedIndex].value
+			});			
+		} else if($(this).attr("value")=="LS200") {
+			firebase.database().ref('dailyActivity').update({
+				area: cent.options[cent.selectedIndex].value
+			});	
+		} else {
+			firebase.database().ref('dailyActivity').update({
+				area: north.options[north.selectedIndex].value
+			});	
+		}
+	
+	});
+   });
+ });
+
 
 /*		if($(this).attr("value")=="LS100") {
 			function writeUserData(section) {
@@ -78,7 +113,7 @@ $(document).ready(function() {
 
 
 		
-});
+
 
 
 
