@@ -36,8 +36,10 @@ $(document).ready(function() {
 		oxygen: "",
 		drownings: "",
 		bodyRecoveries: ""
+	}
+		
 
-	}      //<------how do i enter this?  
+	});      //<------how do i enter this?  
   });
 });
   //update section in db according to user selection
@@ -85,7 +87,127 @@ $(document).ready(function() {
 	
 	});
    });
- });
+
+//I should definitely be able to make this more dynamic and dry
+$('#nextOne').click(function() {
+	firebase.database().ref('dailyActivity').update({
+		"stats/attendance": $('#attendanceStat').val()
+			
+			});
+});
+
+$('#nextTwo').click(function() {
+	firebase.database().ref('dailyActivity').update({
+		"stats/prevents": $('#preventsStat').val()
+			});
+});
+
+$('#nextThree').click(function() {
+	firebase.database().ref('dailyActivity').update({
+		"stats/ords": $('#ordsStat').val()
+			});
+});
+
+$('#nextFour').click(function() {
+	firebase.database().ref('dailyActivity').update({
+		"stats/meds": $('#medsStat').val()
+			});
+});
+
+$('#nextFive').click(function() {
+	firebase.database().ref('dailyActivity').update({
+		"stats/missingPersons": $('#missingStat').val()
+			});
+});
+
+$('#nextSix').click(function() {
+	firebase.database().ref('dailyActivity').update({
+		"stats/evr": $('#evrStat').val()
+			});
+});
+
+$('#nextSeven').click(function() {
+	firebase.database().ref('dailyActivity').update({
+		"stats/aa": $('#aaStat').val()
+
+			});
+});
+
+$('#nextEight').click(function() {
+	firebase.database().ref('dailyActivity').update({
+		"stats/rescues": $('#rescuesStat').val()
+			});
+});
+
+$('#nextNine').click(function() {
+	firebase.database().ref('dailyActivity').update({
+		"stats/oxygen": $('#o2Stat').val()
+			});
+});
+
+$('#nextTen').click(function() {
+	firebase.database().ref('dailyActivity').update({
+		"stats/drownings": $('#drowningsStat').val()
+			});
+});
+
+$('#allAnswered').click(function() {
+	firebase.database().ref('dailyActivity').update({
+		"stats/bodyRecoveries": $('#recoveryStat').val()
+			});
+});
+
+$('#previousOne').click(function() {
+	$('#attendance').show();
+	$('#prevents').hide();
+});
+
+$('#previousTwo').click(function() {
+	$('#ords').hide();
+	$('#prevents').show();
+});
+
+$('#previousThree').click(function() {
+	$('#meds').hide();
+	$('#ords').show();
+});
+
+$('#previousFour').click(function() {
+	$('#missing').hide();
+	$('#meds').show();
+});
+
+$('#previousFive').click(function() {
+	$('#evr').hide();
+	$('#missing').show();
+});
+
+$('#previousSix').click(function() {
+	$('#aa').hide();
+	$('#evr').show();
+});
+
+$('#previousSeven').click(function() {
+	$('#rescues').hide();
+	$('#aa').show();
+});
+
+$('#previousEight').click(function() {
+	$('#o2').hide();
+	$('#rescues').show();
+});
+
+$('#previousNine').click(function() {
+	$('#drownings').hide();
+	$('#o2').show();
+});
+
+$('#previousTen').click(function() {
+	$('#recovery').hide();
+	$('#drownings').show();
+});
+
+ 
 
 
 /*		if($(this).attr("value")=="LS100") {
