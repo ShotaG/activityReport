@@ -15,86 +15,85 @@
   } );
   </script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.15.1/jquery.validate.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/g/semantic-ui@2.2.6(components/form.min.js+semantic.min.js)"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/themes/base/jquery-ui.css">
   <link rel="stylesheet" href="/resources/demos/style.css">
   <link rel="stylesheet" type="text/css" href="app.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-
-
-
-
-
 </head>
+
 <body>
  <h1 id="intro">Please report your activity for the day</h1>
-
-        <form id="Area Info">
-          <div id="date">
-            <h2>Let's get started</h2
-            <p>Please enter today's date: <input type="text" id="datepicker"></p>
-            <input type="submit" id="firstClick">
-          </div>
+ <h2>Let's get started</h2>
+        <form action="" name="date" id="date">
+          <label for="todaysDate">Please enter date</label> 
+          <input type="text" name="todaysDate" id="datepicker" placeholder="ex: 01/01/2017">
+          <button type="submit" id="firstClick">Submit</button>
+        </form>
             
-          <div id="workSection">
-            <select id="section">
-              <option>Please select your section</option>
-              <option value="LS100" >Southern</option>
-              <option value="LS200">Central</option>
-              <option value="LS300">Northern</option>
-            </select>
-            
-          </div>
-            
-          <div id="area">
-            
-            
-            <div id="southern">
-              <select id="south" class="aor">
+        <form action="" id="workSection">
+            <div>
+              <select id="section">
+                <option>Please select your section</option>
+                <option value="LS100" >Southern</option>
+                <option value="LS200">Central</option>
+                <option value="LS300">Northern</option>
+              </select>
+              
+            </div>
+              
+            <div id="area">
+              
+              
+              <div id="southern">
+                <select id="south" class="aor">
+                  <option>Please select your Area</option>
+                  <option value="LG13-1">LG13-1</option>
+                  <option value="LG13-2">LG13-2</option>
+                  <option value="LG13-3">LG13-3</option>
+                  <option value="LG14-1">LG14-1</option>
+                  <option value="LG14-2">LG14-2</option>
+                  <option value="LG14-3">LG14-3</option>
+                  <option value="LG15-1">LG15-1</option>
+                  <option value="LG16-1">LG16-1</option>
+                  <option value="LG16-2">LG16-2</option>
+                  <option value="LG16-3">LG16-3</option>
+                  <option value="LG17-1">LG17-1</option>
+                  <option value="LG17-2">LG17-2</option>
+                  <option value="LG17-3">LG17-3</option>
+                </select>
+              </div>
+              
+              <div id="central">
+                <select id="cent" class="aor">
                 <option>Please select your Area</option>
-                <option value="LG13-1">LG13-1</option>
-                <option value="LG13-2">LG13-2</option>
-                <option value="LG13-3">LG13-3</option>
-                <option value="LG14-1">LG14-1</option>
-                <option value="LG14-2">LG14-2</option>
-                <option value="LG14-3">LG14-3</option>
-                <option value="LG15-1">LG15-1</option>
-                <option value="LG16-1">LG16-1</option>
-                <option value="LG16-2">LG16-2</option>
-                <option value="LG16-3">LG16-3</option>
-                <option value="LG17-1">LG17-1</option>
-                <option value="LG17-2">LG17-2</option>
-                <option value="LG17-3">LG17-3</option>
+                <option value="LG23-1">LG23-1</option>
+                <option value="LG23-2">LG23-2</option>
+                <option value="LG25-1">LG25-1</option>
+                <option value="LG26-1">LG26-1</option>
+                <option value="LG27-1">LG27-1</option>
+                <option value="LG27-2">LG27-2</option>
+                <option value="LG27-3">LG27-3</option>
               </select>
             </div>
-            
-            <div id="central">
-              <select id="cent" class="aor">
-              <option>Please select your Area</option>
-              <option value="LG23-1">LG23-1</option>
-              <option value="LG23-2">LG23-2</option>
-              <option value="LG25-1">LG25-1</option>
-              <option value="LG26-1">LG26-1</option>
-              <option value="LG27-1">LG27-1</option>
-              <option value="LG27-2">LG27-2</option>
-              <option value="LG27-3">LG27-3</option>
-            </select>
-          </div>
-            
-          <div id="northern">
-              <select id="north" class="aor">
-              <option>Please select your Area</option>
-              <option value="LG33-1">LG33-1</option>
-              <option value="LG33-2">LG33-2</option>
-              <option value="LG34-1">LG34-1</option>
-            </select>
-          </div>
+              
+            <div id="northern">
+                <select id="north" class="aor">
+                <option>Please select your Area</option>
+                <option value="LG33-1">LG33-1</option>
+                <option value="LG33-2">LG33-2</option>
+                <option value="LG34-1">LG34-1</option>
+              </select>
+            </div>
 
 
-          <div>  
-            <input type="submit" id="thirdClick">
+            <div>  
+              <input type="submit" id="thirdClick">
+            </div>
           </div>
-        </div>
         </form>
+        
 
         <form id="stats">
           <h1 id="all"><div id="selectedArea"></div>Please enter your area's statistics for <div id="selectedDate"></div></h1>
@@ -151,7 +150,8 @@
             <div class="statistics" id="recovery">
               <h1>body recoveries<input type="number" id="recoveryStat"></h1>
               <button type="button" id="previousTen">Previous Field</button>
-              <button type="button" id="allAnswered">Review My Stats</button>
+              <a class="click-me" href="reviewMyStats.html">Review My Stats</a>
+              <!-- <button type="button" id="allAnswered">Review My Stats</button> -->
             </div>
           </div>
 
@@ -174,7 +174,9 @@
 
 <script src="https://www.gstatic.com/firebasejs/3.5.0/firebase.js"></script>
 
- <script type="text/javascript" src="app.js"></script>
- <script type="text/javascript" src="crud.js"></script>
+  <script type="text/javascript" src="js/validation.js"></script>
+  <script type="text/javascript" src="js/app.js"></script>
+ <script type="text/javascript" src="js/crud.js"></script>
+
 </body>
 </html>
