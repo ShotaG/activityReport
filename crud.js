@@ -155,7 +155,16 @@ $('#allAnswered').click(function() {
 	firebase.database().ref('dailyActivity').update({
 		"stats/bodyRecoveries": $('#recoveryStat').val()
 			});
+	// var firebaseAnswerReview = firebase.database().ref().child('dailyActivity');
+
+	// firebaseAnswerReview.on('value', function(answeredSnapshot) {
+	// 	firebaseAnswerReview.innerText = answeredSnapshot.val();
+	// 	});
+
+		
 });
+
+
 
 $('#previousOne').click(function() {
 	$('#attendance').show();

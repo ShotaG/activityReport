@@ -18,14 +18,14 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.15.1/jquery.validate.js"></script>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/g/semantic-ui@2.2.6(components/form.min.js+semantic.min.js)"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/themes/base/jquery-ui.css">
-  <link rel="stylesheet" href="/resources/demos/style.css">
+  <!-- <link rel="stylesheet" href="/resources/demos/style.css"> -->
   <link rel="stylesheet" type="text/css" href="app.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
 
 <body>
  <h1 id="intro">Please report your activity for the day</h1>
- <h2>Let's get started</h2>
+ <h2 id="start">Let's get started</h2>
         <form action="" name="date" id="date">
           <label for="todaysDate">Please enter date</label> 
           <input type="text" name="todaysDate" id="datepicker" placeholder="ex: 01/01/2017">
@@ -99,7 +99,9 @@
           <h1 id="all"><div id="selectedArea"></div>Please enter your area's statistics for <div id="selectedDate"></div></h1>
           <div id="statsList">
             <div class="statistics" id="attendance">
-              <h1>attendance<input type="number" id="attendanceStat"></h1>
+              <h1>attendance<input type="number" min="0" step="1" id="attendanceStat"></h1>
+<!--               refer to table.html & make dynamic
+ -->
               <button type="button" id="nextOne">Next Field</button>
             </div>
             <div class="statistics" id="prevents">
@@ -150,13 +152,26 @@
             <div class="statistics" id="recovery">
               <h1>body recoveries<input type="number" id="recoveryStat"></h1>
               <button type="button" id="previousTen">Previous Field</button>
-              <a class="click-me" href="reviewMyStats.html">Review My Stats</a>
-              <!-- <button type="button" id="allAnswered">Review My Stats</button> -->
+              <!-- <a class="click-me" href="reviewMyStats.html">Review My Stats</a> -->
+              <button type="button" id="allAnswered">Review My Stats</button>
             </div>
           </div>
-
+        </form>
           
-          
+        <form id="reviewStats">
+          <h1 id="letsReview">Let's review your stats and make changes, if necessary</h1>
+          <h1>attendance<input type="number" id="reviewAttendance"></h1>
+          <h1>prevents<input type="number" id="reviewPrevs"></h1>
+          <h1>ordinances<input type="number" id="reviewOrds"></h1>
+          <h1>medicals<input type="number" id="reviewMeds"></h1>
+          <h1>missing persons<input type="number" id="reviewMissing"></h1>
+          <h1>evr<input type="number" id="reviewEvr"></h1>
+          <h1>agency assists<input type="number" id="reviewAA"></h1>
+          <h1>rescues<input type="number" id="reviewRescues"></h1>
+          <h1>oxygen therapy<input type="number" id="reviewO2"></h1>
+          <h1>drownings<input type="number" id="reviewDrownings"></h1>
+          <h1>recovery<input type="number" id="reviewRecovery"></h1>
+        </form>  
 
           <!--<h1 id="attendance">attendance<input type="number"></h1>
           <h1>preventative actions taken</h1><input type="number" id="prevents">
@@ -169,7 +184,7 @@
           <h1>oxygen therapy administered</h1><input type="number" id="o2">
           <h1>drownings</h1><input type="number" id="drownings">
           <h1>body recoveries</h1><input type="number" id="recovery">-->
-        </form>
+       
 
 
 <script src="https://www.gstatic.com/firebasejs/3.5.0/firebase.js"></script>

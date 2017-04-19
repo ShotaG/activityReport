@@ -1,4 +1,3 @@
-
 $(document).ready(function() {
 	$('#firstClick').click(function(event) {
 		event.preventDefault();
@@ -70,6 +69,7 @@ $(document).ready(function() {
 	$('#nextOne').click(function() {
 		$('#prevents').show();
 		$('#attendance').hide();
+		$('#reviewAttendance').val(('#attendanceStat').val);
 	});
 
 	$('#nextTwo').click(function() {
@@ -115,6 +115,7 @@ $(document).ready(function() {
 	$('#nextTen').click(function() {
 		$('#recovery').show();
 		$('#drownings').hide();
+		console.log('this is cool');
 	});
 
 	$('#previousOne').click(function() {
@@ -166,6 +167,12 @@ $(document).ready(function() {
 		$('#recovery').hide();
 		$('#drownings').show();
 	});
-});
+
+	$('#allAnswered').click(function() {
+		console.log('yoyoyoyoyo!');
+		$('#stats').hide();
+		$('#reviewStats').show();
+
+	});
 
 
